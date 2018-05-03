@@ -21,11 +21,39 @@
     <div id="banner"></div>
 
     <div class="text_content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
-
-        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
+        <h3> The Idea </h3>
+        <p> My main inspiration for this project came from a beautiful visualization called <a href="#cite-Yau"><i>A Day in the Life of Americans</i> by Nathan Yau from Flowing Data</a>. In my research to inspect the inner workings of this visualization, I came across <a href="#cite-Harvard"> a replica of this project by a group of Harvard students </a>. This project by the Harvard students inspired some of the features that I added to the original visualization. </p>
+        <p> However, the data used in both of these projects was from 2014, and more importantly, it was about the whole U.S. population. As a student who is in their last semester at college, I wanted to see a more relatable aspect. </p>
+        <p> In other words, my main question for this project is how U.S. full-time college students spend their day. Specifically, I wanted to visualize the duration and the transition, examine the distribution and the differences of the activities by groups. </p>
     </div>
 
+    <div class="text_content">
+        <h3> The Process </h3>
+        <figure>
+            <img src="./img/orginal-data.PNG" alt="Original data format" width="100%" height="auto">
+            <figcaption>Data downloaded straight from the ATUS website</figcaption>
+        </figure>
+        <p> At first, I obtained my data using the <a href="#cite-ATUS">American Time Use Survey (ATUS) microdata file</a>. However, the data was not in a readable format  and it also contained irrelevant information. Hence, decoding each of the categories would be quite inefficient. </p>
+        <figure>
+            <img src="./img/extracted-data.PNG" alt="Extracted data" width="100%" height="auto">
+            <figcaption>IPUMS' ATUS data extractor</figcaption>
+        </figure>
+        <p> Then, I tried using <a href="#cite-IPUMS">the Integrated Public Use Microdata Series (IPUMS) ATUS extractor</a>, which extracts data from the same database with a more friendly interface and customizable options. Although, due to the nature of the data, the categories were still encoded, it was much easier to work with since I got to choose what is included in the output data file. </p>
+        <figure>
+            <img src="./img/code-table.PNG" alt="Activity codes" width="100%" height="auto">
+            <figcaption>Activity codes</figcaption>
+        </figure>
+        <p> The activities were originally put into 18 categories. I felt that some of the categories were overlapping, so I took the liberty to combine them. For example, I grouped “Caring for and Helping Household Members”, “Caring for and Helping Non-Household Members”, and “Volunteer Activities” under “Caring for Others”.  While these changes can potentially hinder some insights, they will not affect the broader context of this project. (I might or might not have made the number of categories 12 on purpose so that the data visualization looks like an analog clock) </p>
+        <figure>
+            <img src="./img/script.png" alt="Python script" width="100%" height="auto">
+            <figcaption>Python script</figcaption>
+        </figure>
+        <p> I filtered the data with Excel and processed the filtered data in Python, putting it in a format that could later be read by <a href="#cite-D3">d3.js</a>. I decided to use d3.js, same as the original data visualizations, because I think that the way the author chose to portray time is intuitive. As Meirelles commented on <a href="#cite-NYT"> a similar visualization by The New York Times called <i>How Different Groups Spend Their Day</i></a>: <a href="#cite-Meirelles">“When the goal is to visualize trends in people’s routines, the period we deal with is the twenty-four-hour cycle of the day.”</a> Not only did Nathan Yau describe the recurring pattern but he also conveyed the flow and the duration of the activities. Furthermore, d3.js gives me a lot more control over the design and provides the viewers with interactivity.</p>
+    </div>
+
+    <div class="text_content">
+        <h3> The Results </h3>
+    </div>
     <div id="time_use">
         <div id="sidebar">
             <div id="current_time"></div>
@@ -114,12 +142,6 @@
         <div id="chart"></div>
     </div>
 
-    <div class="text_content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
-
-        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
-    </div>
-
     <div id="chord_diagram">
         <div id="chord"></div>
         <div id="chord_tooltip"></div>
@@ -148,9 +170,29 @@
     </div>
 
     <div class="text_content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
+        <p> Each of the activities is color-coded and each of the 300 circles represents a person. I added the treemap in the sidebar because I wanted to show the distribution of the activities. Since my data only has one level of hierarchy, a bar graph as done by the Harvard students is much more accurate at conveying the information. However, because I wanted my visualization to be condensed so that it is easier for the viewers to keep up with the changing content and pie chart is hard to read with many sections and small percentages, the treemap is the best compromise in my opinion. The purpose of the chord diagram is to answer my question about the transition of the activities. </p>
 
-        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
+        <p> There are some interesting things that I found from visualizations. First of all, these students have an unusual amount of sleep compared to my personal experience, although they go to bed very late (at around 1 - 2 a.m.). The second most time consuming activity after sleeping is leisure, which includes socializing, relaxing, and leisure. On the other hand, education only holds the third place on the list. Second, male students tend to spend more time on leisure, work, and sports, while female students seem to spend more time on housework, personal care, and caring for others. Third, the favorite activity after any kind of work, education, work, and housework, is eating & drinking. Breakfast seems to be less important compared to lunch and dinner. Additionally, there is a slight difference between male and female students. While the favorite activity after education for male students is eating and drinking, it is housework for female students. </p>
+    </div>
+
+    <div class="text_content">
+        <h3>Some Afterthoughts</h3>
+
+        <p> I think that d3.js was quite effective at helping me answering my questions. Although there might be shortcomings that are caused by my method of organizing the data and these 300 students might not be the representative of 20 million college students in the U.S., I have gained a new perspective of college life outside of my personal experiences and stories of my friends. For past projects in the course, Gephi, Palladio, etc. were efficient and straightforward ways to produce meaningful visualizations. However, at multiple points, I felt quite limited by the options provided by those tools. As my research questions for those projects were quite simple compared to those posed by humanities scholars, especially those who devote their whole academic career to those topics, I could only imagine how restricted they must feel. As Elijah Meeks argues, it is quite concerning that <a href="#cite-Meeks">“humanities scholars show a willingness to defer to tools”</a> and even more troubling that <a href="#cite-Meeks">“they may simply surrender to tool builders.”</a> D3.js, although a product of mathematics and computer science that also contains predeterministic features chosen by the author and <a href="#cite-Meeks">“isn’t built for humanists,”</a> as <a href="#cite-Meeks">“nothing is truly built for humanists,”</a> does open up more possibilities by providing more creative power to author-driven contents and more interactivity for reader-driven exploration. After all, <a href="#cite-Danzico">“the human stuff is the main stuff, and the data should enrich it,”</a> and with increasing access to Internet and open-source libraries like d3.js, I hope that works of digital humanities will be <a href="#cite-Meeks">“as rich and sophisticated and poetic as that described in our libraries and seminar rooms and long discourses”</a> in a very near future. </p>
+    </div>
+
+    <div class="text_content" id="references">
+        <h3>References</h3>
+        <p id="cite-Harvard"> "Activity Categories." US Time Use Visualization. Accessed May 03, 2018. <a href="http://ustimeuse.github.io/" target="_blank">http://ustimeuse.github.io/</a>.</p>
+        <p id="cite-ATUS"> ATUS Data Files." U.S. Bureau of Labor Statistics. Accessed May 03, 2018. <a href="https://www.bls.gov/tus/data.htm" target="_blank"> https://www.bls.gov/tus/data.htm</a>.</p>
+        <p id="cite-D3"> Bostock, Mike. "Data-Driven Documents." D3.js. Accessed May 03, 2018. <a href="https://d3js.org/" target="_blank">https://d3js.org/</a>.</p>
+        <p id="cite-Danzico">L. Danzico. "Telling stories using data: An interview with Jonathan Harris." 2008. <a href="http://bit.ly/jh-int" target="_blank"> http://bit.ly/jh-int</a>.</p>
+        <p id="cite-NYT">"How Different Groups Spend Their Day." The New York Times. July 31, 2009. Accessed May 03, 2018. <a href="https://archive.nytimes.com/www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html" target="_blank"> https://archive.nytimes.com/www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html</a>.</p>
+        <p id="cite-Meeks"> Meeks, Elijah. "Digital Humanities as Thunderdome." Journal of Digital Humanities. Accessed May 03, 2018. <a href="http://journalofdigitalhumanities.org/1-1/digital-humanities-as-thunderdome-by-elijah-meeks/" target="_blank"> http://journalofdigitalhumanities.org/1-1/digital-humanities-as-thunderdome-by-elijah-meeks/</a>.</p>
+        <p id="cite-Meirelles"> Meirelles, Isabel. Design for Information: An Introduction to the Histories, Theories, and Best Practices behind Effective Information Visualizations. Beverly: Rockport, 2013. </p>
+        <p id="cite-IPUMS">MPC. "AMERICAN TIME USE SURVEY EXTRACT BUILDER." ATUS-X : ATUS Data Extract Builder. Accessed May 03, 2018. <a href="https://www.atusdata.org/atus/" target="_blank"> https://www.atusdata.org/atus/</a>.</p>
+        <p id="cite-Segel-Heer">Segel, E., and J. Heer. "Narrative Visualization: Telling Stories with Data." IEEE Transactions on Visualization and Computer Graphics 16, no. 6 (2010): 1139-148. doi:10.1109/tvcg.2010.179.</p>
+        <p id="cite-Yau">Yau, Nathan. "A Day in the Life of Americans." FlowingData. December 30, 2017. Accessed May 03, 2018. <a href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/" target="_blank"> https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/</a>.</p>
     </div>
 </div>
 

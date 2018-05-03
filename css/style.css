@@ -16,6 +16,24 @@ body {
     background: black url("../img/clock-minimalism-image.jpg") no-repeat center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    background-color: var(--color-1);
+    color: white;
+}
+figure {
+    margin: 60px auto;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 60px;
@@ -29,6 +47,15 @@ h2 {
     letter-spacing: 6px;
     color: var(--color-2);
 }
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .text_content {
     max-width: 750px;
     margin: 60px auto;
@@ -182,4 +209,15 @@ aside {padding: 20px;}
 
 #legend {
     padding-top: 20px;
+}
+
+#references {
+    font-size: 16px;
+    margin: 150px auto;
+}
+
+#references h3 {
+    font-size: 16px;
+    font-family: 'Montserrat SemiBold', sans-serif;
+    text-transform: uppercase;
 }

@@ -582,4 +582,6 @@ d3.selectAll(".gender_filter")
             .text(function (d) {
                 return act_counts.children[d.index] + "%";
             });
+
+        timer();
     });
