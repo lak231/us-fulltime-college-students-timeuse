@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Final Project</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="main_wrapper">
+
+    <div id="header">
+        <h2>Khôi Lê</h2>
+        <h1>U.S. Full-time College Students' Time Use</h1>
+        <h2>Data Visualization for the Digital Humanities</h2>
+        <h2>Final Project</h2>
+
+    </div>
+
+    <div id="banner"></div>
+
+    <div class="text_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
+
+        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
+    </div>
+
+    <div id="time_use">
+        <div id="sidebar">
+            <div id="current_time"></div>
+            <div id="play">
+                <i class="fas fa-play"></i>
+            </div>
+            <div id="speed">
+                <div class="radio-tile-group">
+                    <div class="input-container">
+                        <input id="slow" class="speed_control radio-button" type="radio" name="speed" value="slow" />
+                        <div class="radio-tile">
+                            <label for="slow" class="radio-tile-label">Slow</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input id="medium" class="speed_control radio-button" type="radio" name="speed" value="medium" checked="checked" />
+                        <div class="radio-tile">
+                            <label for="medium" class="radio-tile-label">Medium</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input id="fast" class="speed_control radio-button" type="radio" name="speed" value="fast" />
+                        <div class="radio-tile">
+                            <label for="fast" class="radio-tile-label">Fast</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="filter">
+                <div class="radio-tile-group">
+                    <div class="input-container">
+                        <input id="all" class="gender_filter radio-button" type="radio" name="gender" value="all" checked="checked" />
+                        <div class="radio-tile">
+                            <label for="all" class="radio-tile-label">All</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input id="male" class="gender_filter radio-button" type="radio" name="gender" value="male"/>
+                        <div class="radio-tile">
+                            <label for="male" class="radio-tile-label">Male</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input id="female" class="gender_filter radio-button" type="radio" name="gender" value="female"/>
+                        <div class="radio-tile">
+                            <label for="female" class="radio-tile-label">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="view">
+                <div class="radio-tile-group">
+                    <div class="input-container">
+                        <input id="realtime" class="view_control radio-button" type="radio" name="view" value="realtime" checked="checked" />
+                        <div class="radio-tile">
+                            <label for="realtime" class="radio-tile-label">Realtime</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input id="summary" class="view_control radio-button" type="radio" name="view" value="summary"/>
+                        <div class="radio-tile">
+                            <label for="summary" class="radio-tile-label">Summary</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="legend">
+                <i style="color: #ff6384" class="fas fa-square-full"></i> Sleeping
+                <i style="color: #ff9f40" class="fas fa-square-full"></i> Personal Care <br>
+                <i style="color: #C7F464" class="fas fa-square-full"></i> Housework
+                <i style="color: #36a2eb" class="fas fa-square-full"></i> Education <br>
+                <i style="color: #C44D58" class="fas fa-square-full"></i> Shopping
+                <i style="color: #e6e6e6" class="fas fa-square-full"></i> Traveling <br>
+                <i style="color: #ffcd56" class="fas fa-square-full"></i> Leisure
+                <i style="color: #9966ff" class="fas fa-square-full"></i> Care for Others <br>
+                <i style="color: #FECEA8" class="fas fa-square-full"></i> Sports
+                <i style="color: #4bc0c0" class="fas fa-square-full"></i> Work <br>
+                <i style="color: #99B898" class="fas fa-square-full"></i> Religion
+                <i style="color: #2A363B" class="fas fa-square-full"></i> Other <br>
+
+                <i style="color: #00b400" class="fas fa-square-full"></i> Eating & Drinking
+            </div>
+            <div id="treemap"></div>
+            <div id="tooltip"></div>
+        </div>
+        <div id="chart"></div>
+    </div>
+
+    <div class="text_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
+
+        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
+    </div>
+
+    <div id="chord_diagram">
+        <div id="chord"></div>
+        <div id="chord_tooltip"></div>
+        <div id="chord_filter">
+            <div class="radio-tile-group">
+                <div class="input-container">
+                    <input id="chord_all" class="chord_gender_filter radio-button" type="radio" name="chord_gender" value="all" checked="checked"/>
+                    <div class="radio-tile">
+                        <label for="chord_all" class="radio-tile-label">All</label>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input id="chord_male" class="chord_gender_filter radio-button" type="radio" name="chord_gender" value="male"/>
+                    <div class="radio-tile">
+                        <label for="chord_male" class="radio-tile-label">Male</label>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input id="chord_female" class="chord_gender_filter radio-button" type="radio" name="chord_gender" value="female"/>
+                    <div class="radio-tile">
+                        <label for="chord_female" class="radio-tile-label">Female</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dolor vel nunc venenatis sollicitudin. Maecenas libero lorem, pulvinar ac elementum ullamcorper, porttitor nec arcu. Fusce in mollis urna. Vivamus lectus nisl, tempor nec egestas vel, ultricies facilisis est. Vestibulum vehicula libero risus, ac posuere erat sodales vel. Cras nec ullamcorper nisl. Nulla placerat orci bibendum, sagittis diam vitae, pellentesque arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed nunc metus, sagittis eget viverra sed, dapibus sed urna. Duis viverra id diam in sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis facilisis eros, quis fermentum justo consectetur ac. Mauris ex diam, malesuada in eleifend sed, pretium eu orci.</p>
+
+        <p>Nunc lacinia vehicula erat, nec pulvinar elit tempor in. Duis efficitur, erat id dictum consectetur, nunc nibh ultrices odio, sollicitudin condimentum sem velit fermentum metus. Nunc rhoncus velit non faucibus convallis. Suspendisse ac posuere nunc. Morbi interdum faucibus venenatis. Curabitur bibendum est nec arcu porta, at auctor dui placerat. Etiam venenatis libero ex, sit amet finibus lectus posuere ac. Integer suscipit elit diam, iaculis suscipit nibh porttitor nec. Vivamus pellentesque varius erat, sit amet sollicitudin turpis dignissim blandit. Ut vel hendrerit risus. Nullam pellentesque viverra dolor, vitae volutpat quam porta vel. Donec interdum gravida ultricies. Mauris placerat neque ut maximus accumsan.</p>
+    </div>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="./js/underscore-min.js"></script>
+<script src="./data/animation/all.js"></script>
+<script src="./data/animation/male.js"></script>
+<script src="./data/animation/female.js"></script>
+<script src="./js/animation.js"></script>
+<script src="./js/chord.js"></script>
+</body>
+
+</html>
