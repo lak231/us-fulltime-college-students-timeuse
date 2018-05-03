@@ -185,7 +185,6 @@ def main(filepath, filename):
         curr_id = 0
         activities = []
         for row in reader:
-            #ï»¿CASEID
             if row["CASEID"] != curr_id:
                 curr_id = row["CASEID"]
                 if len(activities) != 0:
